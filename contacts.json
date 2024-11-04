@@ -1,0 +1,44 @@
+{
+    "contacts": [
+        {
+            "surname": "Litsman",
+            "phone": "144-466-759"
+        },
+        {
+            "surname": "Ivanov",
+            "phone": "231-112-330"
+        },
+        {
+            "surname": "Magamed",
+            "phone": "315-629-202"
+        },
+        {
+            "surname": "Zelenskiy",
+            "phone": "446-761-000"
+        },
+        {
+            "surname": "Goloborodko",
+            "phone": "881-674-751"
+        },
+        {
+            "surname": "Baranova",
+            "phone": "681-981-666"
+        },
+        {
+            "surname": "Bandera",
+            "phone": "722-773-321"
+        },
+        {
+            "surname": "Poroshenko",
+            "phone": "877-131-474"
+        },
+        {
+            "surname": "Kravchyk",
+            "phone": "925-555-575"
+        },
+        {
+            "surname": "Kluchko",
+            "phone": "066-373-221"
+        }
+    ]
+}
