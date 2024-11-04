@@ -1,6 +1,5 @@
 import json
 
-# Дані для записника (приклад)
 data = {
     "contacts": [
         {"surname": "Litsman", "phone": "144-466-759"},
@@ -28,38 +27,34 @@ def save_contacts(data):
         json.dump(data, json_file, ensure_ascii=False, indent=4)
 def add_contact(surname, phone):
 
-    # Перевіряємо, чи контакт з таким прізвищем або телефоном вже існує
+    
     for contact in data["contacts"]:
         if contact["surname"] == surname:
             return f"Контакт з прізвищем {surname} вже існує."
         if contact["phone"] == phone:
             return f"Контакт з номером телефону {phone} вже існує."
     
-    # Додаємо новий контакт
+ 
     data["contacts"].append({"surname": surname, "phone": phone})
-    save_contacts(data)  # Зберігаємо зміни в файлі
+    save_contacts(data)  
     return f"Контакт {surname} з номером {phone} додано."
 
 
-# Зберігаємо дані у JSON-файл
 with open('contacts.json', 'w') as json_file:
     json.dump(data, json_file, ensure_ascii=False, indent=4)
 
-# Функція для перевірки наявності телефону за прізвищем
 def find_phone_by_surname(surname):
     for contact in data["contacts"]:
         if contact["surname"] == surname:
             return f"Телефон {surname}: {contact['phone']}"
     return f"Телефон для {surname} не знайдено."
 
-# Функція для перевірки наявності прізвища за телефоном
 def find_surname_by_phone(phone):
     for contact in data["contacts"]:
         if contact["phone"] == phone:
             return f"Власник телефону {phone}: {contact['surname']}"
     return f"Людину з номером {phone} не знайдено."
 
-# Головне меню
 def main_menu():
     while True:
         print("\nМеню:")
@@ -89,6 +84,5 @@ def main_menu():
         else:
             print("Неправильний вибір. Спробуйте ще раз.")
 
-# Запуск програми
 if __name__ == "__main__":
     main_menu()
